@@ -1,0 +1,52 @@
+body {
+    background-image: url("Media/backgrounds/light.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    transition: all 0.3s ease-in-out;
+    
+}
+
+.Taskbar {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    height: 50px;
+    background: linear-gradient(to right,
+        rgba(232, 240, 246, 0.6),
+        rgba(220, 230, 245, 0.6),
+        rgba(210, 225, 245, 0.6),
+        rgba(220, 230, 245, 0.6),
+        rgba(232, 240, 246, 0.6)
+    );
+    backdrop-filter: blur(30px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1; /* full opacity because background already has transparency */
+    transition: all 0.3s ease-in-out;
+}
+
+.Taskbar-App {
+    width: 43px;
+    height: 43px;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    transition: .1s all ease-in;
+
+}
+
+.Taskbar-App:hover {
+    background-color: #f3f3f3be;
+}
+
+.Taskbar-App img {
+    user-select: none !important;
+    width: 27px;
+    height: 27px;
+}
