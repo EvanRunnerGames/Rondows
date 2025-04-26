@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 body {
     background-image: url("Media/backgrounds/light.jpg");
     background-repeat: no-repeat;
@@ -7,6 +9,10 @@ body {
     padding: 0;
     transition: all 0.3s ease-in-out;
     
+}
+
+* {
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
 
 .Taskbar {
@@ -41,12 +47,46 @@ body {
 
 }
 
+.Taskbar-Name {
+    position: absolute;
+    top: 0;
+    font-size: 12px;
+    width: fit-content;
+    background-color: black;
+    background-color: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
+    backdrop-filter: blur(10px); /* Apply blur */
+    -webkit-backdrop-filter: blur(30px); /* Safari support */
+    border-radius: 6px; /* Optional: adds rounded corners */
+    padding: 6px;
+    color: white;
+    font-weight: bolder;
+    user-select: none !important;
+    pointer-events: none !important;
+
+    opacity: 0;
+
+    transition: all 0.3s ease-in-out;
+
+}
+
+.Taskbar-App:active img {
+    transform: scale(0.75);
+}
+
+.Taskbar-App:hover .Taskbar-Name {
+    transform: translateY(-30px);
+    opacity: 1;
+}
+
+
 .Taskbar-App:hover {
     background-color: #f3f3f3be;
 }
 
 .Taskbar-App img {
+    position: relative;
     user-select: none !important;
     width: 27px;
     height: 27px;
+    transition: all 0.1s ease-in-out;
 }
